@@ -51,6 +51,8 @@ def get_pet_labels(image_dir):
 
     # create dictionary
     for filename in filename_list:
+          if filename.startswith('.'):
+                continue
           if filename not in results_dic:
                 # get label
                 label = filename[0: filename.rfind('_')].replace(
